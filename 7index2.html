@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Write a JavaScript program to sort the items of an array.
+        let array1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+        let array2 = [];
+        let min = array1[0];
+        let max = array1[0];
+        let pos;
+        for (i = 0; i <array1.length; i++) {
+            if (max < array1[i])
+        max = array1[i];
+        }
+
+        for (var i = 0; i <array1.length; i++) {
+            for (var j =0; j < array1.length; j++) {
+                if (array1[j] != "x"){
+                    if (min > array1[j]){
+                        min = array1[j];
+                        pos = j;
+                    }
+                }
+            }
+            array2[i] = min;
+            array1[pos] = "x";
+            min=max;
+        }
+        console.log(array2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // код для смены регистра 
+        let string = "Hello World!";
+        const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        const result = [];
+
+        for(let x = 0; x < string.length; x++ ) {
+            if(upperCase.includes(string[x])) {
+                result.push(string[x].toLowerCase());
+            }
+            else if(lowerCase.includes(string[x])) {
+                result.push(string[x].toUpperCase());
+            }
+            else {
+                result.push(string[x]);
+            }
+        }
+
+        console.log(result.join(""));
+    </script>
+</body>
+</html>
